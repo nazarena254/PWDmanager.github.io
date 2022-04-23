@@ -50,7 +50,22 @@ class TestCredentials(unittest.TestCase):
         Test case to test presence credential object in the credentials_list items.
         """
         self.new_credential.save_details()
-        self.assertEqual(len(Credentials.credentials_list),1)    
+        self.assertEqual(len(Credentials.credentials_list),1)
+    def test_delete_credential(self):
+        """
+        Test method to test a deleted credentials account is removed from the credentials_list
+        """
+        self.new_credential.save_details()
+        test_credential = Credentials("Codewar","nazarena","renah234")
+        test_credential.save_details()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)     
+    def tearDown(self):
+        '''
+        Test method to test if deleted credential account has been cleared from credentials_list.
+        '''
+        Credentials.credentials_list = []       
 
 if __name__ == "__main__":
     unittest.main()

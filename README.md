@@ -15,7 +15,7 @@ Nazarena Wambura.</br>
 
 
 ## Behaviour Driven Development
-* Given the user Follows the Procedure in the terminal after running the file.
+* Given the user Follows the Procedure in the terminal after running the run.py file.
 * When he/she enters cc, He/she will create a new contact
 * Then he/she can enter dc to diplay contact, sc to search contact or ex to exit.
 
