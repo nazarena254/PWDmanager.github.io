@@ -14,7 +14,8 @@ class User:
         """
         This method defines the properties needed when instanciating a new User.
         """
-        self.username = username.capitalize()
+        # self.username = username.capitalize()
+        self.username = username
         self.password = password
 
     def save_user(self):
@@ -104,7 +105,7 @@ class Credentials():
         """
         This method returns all list items(credential accounts) in the credentials list
         """
-        return cls.credentials_list[0,8]
+        return cls.credentials_list
 
     def generatePassword(stringLength=8):
         """This method will generate random password with letters,
