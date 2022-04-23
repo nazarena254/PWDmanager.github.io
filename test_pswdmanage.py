@@ -65,7 +65,15 @@ class TestCredentials(unittest.TestCase):
         '''
         Test method to test if deleted credential account has been cleared from credentials_list.
         '''
-        Credentials.credentials_list = []       
+        Credentials.credentials_list = [] 
+    def test_save_many_accounts(self):
+        '''
+        Test to confirm that we can save many credentials accounts objects to our credentials_list
+        '''
+        self.new_credential.save_details()
+        test_credential = Credentials("Codewar","nazarena","renah234") 
+        test_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),2)          
 
 if __name__ == "__main__":
     unittest.main()

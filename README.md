@@ -2,7 +2,7 @@
 ### It is a python application that allow users manage user passwords and even generate new passwords for them. 
 
 ## Description
-> - PWDmanager will have two sections;<br> First, the user will have a login username and password to the application.<br> - Second, the user will create new credentials account to store and view their various account(Eg twitter, codewar, linked, gmail...) credentials and their passwords in the application.<br> - The application also generates a password for her/him to use when he/she signs up to a new account(Eg Facebook). Alternatively, the application gives the user an to option of putting in a password that he/she wants to use for the new credential account(Eg Facebook).
+> PWDmanager application will have two sections;<br> - First, the user will have a login username and password to the application.<br> - Second, the user will create new credentials account to store and view their various account(Eg twitter, codewar, linked, gmail...) credentials and their passwords in the application.<br> - The application also generates a password for her/him to use when he/she signs up to a new account(Eg Facebook). Alternatively, the application gives the user an to option of putting in a password that he/she wants to use for the new credential account(Eg Facebook).
 
 ## Author
 Nazarena Wambura.</br>
@@ -21,10 +21,11 @@ Nazarena Wambura.</br>
 
 
 ## Installed packages
-* Install python extension in IDLE(VScode) to run python modules easily
+* Install code editor of your choice.
 * Run `sudo apt-get update`,`sudo apt-get install python3.6` in terminal to install python.
+* Install python extension in code editor(VScode) to run python modules easily.
 * Run `python3.9 -m pip install pyperclip` in terminal to install pyperclip module, python version varies.
-* Ctrl+v or paste, to pasteritems to our clipboard.
+* Ctrl+v or paste, to paste items to our clipboard.
 
 
 ## Installation / Setup instruction
