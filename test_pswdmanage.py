@@ -45,6 +45,12 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.account,'Linkedin')
         self.assertEqual(self.new_credential.userName,'annet_Renah')
         self.assertEqual(self.new_credential.password,'renah123')
+    def save_credential_test(self):
+        """
+        Test case to test presence credential object in the credentials_list items.
+        """
+        self.new_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),1)    
 
 if __name__ == "__main__":
     unittest.main()
