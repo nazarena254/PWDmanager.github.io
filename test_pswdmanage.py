@@ -73,7 +73,28 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_details()
         test_credential = Credentials("Codewar","nazarena","renah234") 
         test_credential.save_details()
-        self.assertEqual(len(Credentials.credentials_list),2)          
+        self.assertEqual(len(Credentials.credentials_list),2)  
+    def test_search_credential(self):
+        """
+        Test to search for a credential account by passing account name as the parameter
+        """
+        self.new_credential.save_details()
+        test_credential = Credentials("Codewar","nazarena","renah234") 
+        test_credential.save_details()
+
+        the_credential = Credentials.search_credential("Codewar")
+
+        self.assertEqual(the_credential.account,test_credential.account)
+    def test_credential_exist(self):
+        """
+        Test to check if we can return a true or false based on whether we find or can't find the credential.
+        """
+        self.new_credential.save_details()
+        the_credential = Credentials("Codewar","nazarena","renah234")  
+        the_credential.save_details()
+        credential_is_found = Credentials.if_credential_exist("Codewar")
+        self.assertTrue(credential_is_found) 
+                       
 
 if __name__ == "__main__":
     unittest.main()
