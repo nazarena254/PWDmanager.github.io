@@ -38,7 +38,13 @@ class TestCredentials(unittest.TestCase):
         Method that runs before each individual credentials test methods run.
         """
         self.new_credential = Credentials('Linkedin','annet_Renah','renah123')
-
+    def test_init(self):
+        """
+        Test case to check if a new Credentials instance has been initialized correctly
+        """
+        self.assertEqual(self.new_credential.account,'Linkedin')
+        self.assertEqual(self.new_credential.userName,'annet_Renah')
+        self.assertEqual(self.new_credential.password,'renah123')
 
 if __name__ == "__main__":
     unittest.main()
