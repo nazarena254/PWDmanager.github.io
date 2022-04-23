@@ -29,5 +29,16 @@ class TestClass(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
 
+class TestCredentials(unittest.TestCase):
+    """
+    A test class that defines test cases for credentials class
+    """ 
+    def setUp(self):
+        """
+        Method that runs before each individual credentials test methods run.
+        """
+        self.new_credential = Credentials('Linkedin','annet_Renah','renah123')
+
+
 if __name__ == "__main__":
     unittest.main()
