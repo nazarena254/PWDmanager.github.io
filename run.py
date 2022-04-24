@@ -159,7 +159,8 @@ def main():
     else:
         print("Enter correct input as guided to continue")
 
-
+if __name__ == "__main__":
+    main()
 
 
 
