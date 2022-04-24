@@ -1,7 +1,7 @@
 from pswdmanage import User
 from pswdmanage import Credentials
 import unittest
-# import our class from pswdmanage module
+# import our classes from pswdmanage module
 
 class TestClass(unittest.TestCase):
     """
@@ -99,7 +99,7 @@ class TestCredentials(unittest.TestCase):
         Tests the method that displays all the credentials that has been saved by the user
         '''
 
-        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)    
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
 
 if __name__ == "__main__":
