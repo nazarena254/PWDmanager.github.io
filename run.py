@@ -43,4 +43,20 @@ def generate_Password():#generate password for a credential account
     auto_password=Credentials.generatePassword()
     return auto_password
 def copy_password(account):#copies the password taking account as parameter and using pyperclip framework
-    return Credentials.copy_password(account)    
+    return Credentials.copy_password(account) 
+
+def pwdManager():
+    print("")
+    print("*** LETS GET STARTED ****")
+    print("Enter su  to  Sign Up")
+    print("OR")
+    print("Enter li to Login")
+
+
+
+
+
+
+
+
+
