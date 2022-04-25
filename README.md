@@ -32,6 +32,6 @@ Moreover, to create password for the credential accounts, the user has an option
 ## Installation / Setup instruction
 * Open Terminal {Ctrl+Alt+T}
 * create and cd to the directory where you want to have your project
-* git clone ```https://github.com/nazarena254/ContactPhonebook.git``` to have it on your machine.
+* git clone ```https://github.com/nazarena254/PWDmanager.github.io.git``` to have it on your machine.
 * code . or atom . based on the text editor you have.
 * work on it.
