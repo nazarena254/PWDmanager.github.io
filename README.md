@@ -1,4 +1,6 @@
 # PWDmanager
+![Alt text](./images/PWDmanager.png "Terminal")
+
 ### It is a python application that allow users manage user passwords and even generate new passwords for them. 
 
 ## Description
@@ -35,3 +37,13 @@ Moreover, to create password for the credential accounts, the user has an option
 * git clone ```https://github.com/nazarena254/PWDmanager.github.io.git``` to have it on your machine.
 * code . or atom . based on the text editor you have.
 * work on it.
+
+
+## License
+Distributed under MIT license.</br>
+Copyright (c) 2022
+
+
+## Support and Contact
+Incase of bug email me.</br>
+<renahwamburah@gmail.com>
