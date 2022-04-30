@@ -40,7 +40,7 @@ Moreover, to create password for the credential accounts, the user has an option
 
 
 ## License
-Distributed under MIT license.</br>
+Distributed under [MIT license](https://github.com/nazarena254/PWDmanager.github.io/blob/master/LICENSE).</br>
 Copyright (c) 2022
 
 
