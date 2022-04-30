@@ -71,12 +71,12 @@ class Credentials():
         """
         This method appends new account credential to the credentials_list.
         """
-        Credentials.credentials_list.append(self) 
-    @classmethod
+        Credentials.credentials_list.append(self)   
+    @classmethod   
     def search_credential(cls, account):
         """
         This method takes account_name as parameter and returns a credential that matches that account_name.
-        """
+        """    
         for credential in cls.credentials_list:
             if credential.account == account:
                 return credential

@@ -26,6 +26,7 @@ def display_user(): #display user
 def login_user(username,password): #check user existence
     check_user = Credentials.validate_user(username,password)
     return check_user
+
 def create_new_credential(account,userName,password): #create credential account for new user
     new_credential = Credentials(account,userName,password)
     return new_credential
@@ -35,8 +36,8 @@ def display_accounts_details():#display saved credential accounts
     return Credentials.display_credentials()
 def delete_credential(credentials):#delete a credentials account from credentials_list
     credentials.delete_credentials()
-def search_credential(account): #search a credentials account details by an account name
-    return Credentials.find_credential(account)
+def find_credential(account): #search a credentials account details by an account name
+    return Credentials.search_credential(account)
 def check_credentials(account):#check if a credentials account exists with that account name and return true or false
     return Credentials.if_credential_exist(account)
 def generate_Password():#generate password for a credential account
@@ -95,7 +96,7 @@ def main():
             print("")
             account = input().lower()
             print("Enter Your Credential Account username")
-            userName = input()
+            userName2 = input()
             while True:
                 print(" tp  To type your own pasword if you already have an account")
                 print("OR")
@@ -104,42 +105,45 @@ def main():
                 if password_Choice == 'tp':
                     # password = input("Enter Your Own Password")
                     password = getpass.getpass('Enter Your Own Password: ')
-                    print("username ",userName, ", Your pasword is sucessfully created")
+                    print("username ",userName2, ", Your pasword is sucessfully created")
                     break
                 elif password_Choice == 'gp':
                     password = generate_Password()
-                    print("username ",userName, ", Your pasword: ",password,"is sucessfully generated")
+                    print("username ",userName2, ", Your pasword: ",password,"is sucessfully generated")
                     break
                 else:
                     print("Invalid password please try again")
-            save_credentials(create_new_credential(account,userName,password))
+            save_credentials(create_new_credential(account,userName2,password))
         elif short_code == "dc":
             if display_accounts_details():
                 print("")
                 print("All your Credential accounts details: ")                
                 print("")
                 for account in display_accounts_details():
-                    print(f" Account is:{account.account} \n User Name is:{username}\n Password is:{password}")
+                    print(f" Account is:{account.account} \n User Name is:{userName2}\n Password is:{password}")
                     print("")
                 print("")
             else:
                 print("No credential account created")
         elif short_code == "sc":
             print("Enter the Credential Account Name (Eg twitter) to see more details")
-            search_name = input().lower().strip()
-            if search_credential(search_name):
-                search_credential = search_credential(search_name)
+            search_name = input()
+            # if search_credential(search_name):
+            
+            if check_credentials(search_name): 
+                global search_credential  
+                search_credential = find_credential(search_name)
                 print(f"For : {search_credential.account} account;")
-                print(f"User Name is: {search_credential.userName} Password is:{search_credential.password}")
+                print(f"User Name is: {userName2} Password is:{search_credential.password}")
                 print("")
             else:
                 print("That Credential Account does not exist")
                 print("")
         elif short_code == "del":
             print("Enter the account name of the Credential Account you wish to delete")
-            search_name = input().lower().strip()
-            if search_credential(search_name):
-                search_credential = search_credential(search_name)
+            search_name = input()
+            if check_credentials(search_name):
+                search_credential = find_credential(search_name)
                 print("")
                 search_credential.delete_credentials()
                 print("")
@@ -152,12 +156,13 @@ def main():
             password = generate_Password()
             print(f" {password} Password generated successfully. Use it at your own pleasure")
         elif short_code == 'ex':
-            print("Your password(s) for credential account(s) are now safe")
+            print("Your passwords for credential account are now safe")
             break
         else:
             print("Wrong short code.")
     else:
         print("Enter correct input as guided to continue")
+        
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()    
